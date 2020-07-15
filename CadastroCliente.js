@@ -11,7 +11,7 @@ import {
   TouchableOpacity,
   Button
   } from 'react-native';
-import{styles} from './Styles';
+import{styles, stylesLog} from './Styles';
 import {stylesCad} from './Styles';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 import 'react-native-gesture-handler';
@@ -22,27 +22,36 @@ import { Header } from '@react-navigation/stack';
 
 function cadastroCliente({navigation}) {
     return (
-      <KeyboardAvoidingView keyboardVerticalOffset = {-100} style = {{ flex: 1 }}
+      <KeyboardAvoidingView keyboardVerticalOffset = {-400} style = {{ flex: 1 }}
       behavior = "padding" style={styles.background}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <View style={styles.containerLogoLogin}>
+      <View style={stylesCad.containerLogoCad}>
         <Image source={require('./assets/agind.png')}/>
       </View>
 
-      <View style={styles.container}>
+      <View style={stylesCad.container}>
+      <Text style={stylesCad.infoText} >Cadastre-se como cliente.</Text>
+        <TextInput style={styles.input}
+        placeholder="Nome"
+        placeholderTextColor="#0C93D4"
+        autoCorrect={false}
+        onChangeText ={()=>{}}
+        />
         <TextInput style={styles.input}
         placeholder="Email"
+        placeholderTextColor="#0C93D4"
         autoCorrect={false}
         onChangeText ={()=>{}}
         />
         <TextInput style={styles.input}
         placeholder="Senha"
+        placeholderTextColor="#0C93D4"
         autoCorrect={false}
         onChangeText ={()=>{}}
         secureTextEntry
         />
 
-        <TouchableOpacity style={styles.btnSubmit} onPress={() => navigation.navigate('Login', {name: 'Login'})}>
+        <TouchableOpacity style={stylesCad.btnSubmit} onPress={() => navigation.navigate('Login', {name: 'Login'})}>
           <Text style={styles.submitText}>
             Pronto
           </Text>

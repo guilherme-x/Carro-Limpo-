@@ -12,34 +12,37 @@ import {
   Button
   } from 'react-native';
 import{styles} from './Styles';
-import {stylesCad} from './Styles';
+import {stylesLog, stylesCad} from './Styles';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 import 'react-native-gesture-handler';
 import { hide } from 'expo/build/launch/SplashScreen';
 
 function Login({navigation}) {
     return (
-      <KeyboardAvoidingView keyboardVerticalOffset = {-500} style = {{ flex: 1 }}
+      <KeyboardAvoidingView keyboardVerticalOffset = {-400} style = {{ flex: 1 }} 
       behavior = "padding" style={styles.background}>
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss} onPress={Image.hide}>
-      <View style={styles.containerLogoLogin}>
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <View style={stylesLog.containerLogoLogin}>
         <Image source={require('./assets/agind.png')}/>
       </View>
 
-      <View style={styles.container}>
+      <View style={stylesLog.container}>
+      <Text style={stylesCad.infoText} >Faça login.</Text>
         <TextInput style={styles.input}
         placeholder="Email"
+        placeholderTextColor="#0C93D4"
         autoCorrect={false}
         onChangeText ={()=>{}}
         />
         <TextInput style={styles.input}
         placeholder="Senha"
+        placeholderTextColor="#0C93D4"
         autoCorrect={false}
         onChangeText ={()=>{}}
         secureTextEntry
         />
 
-        <TouchableOpacity style={styles.btnSubmit} onPress={() => navigation.navigate('Login', {name: 'Login'})}>
+        <TouchableOpacity style={stylesLog.btnSubmit} onPress={() => navigation.navigate('Login', {name: 'Login'})}>
           <Text style={styles.submitText}>
             Pronto
           </Text>
