@@ -25,5 +25,18 @@
     "babel-preset-expo": "~8.0.0",
     "@babel/core": "^7.0.0"
   },
-  "private": true
+  "private": true,
+  "name": "carro-limpo-",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilherme-x/Carro-Limpo-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guilherme-x/Carro-Limpo-/issues"
+  },
+  "homepage": "https://github.com/guilherme-x/Carro-Limpo-#readme",
+  "description": ""
 }
